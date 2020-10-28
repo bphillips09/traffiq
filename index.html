@@ -65,14 +65,13 @@
     }
 </style>
 
-
 <head>
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link href="dist/lity.min.css" rel="stylesheet">
+    <script src="dist/lity.min.js"></script>
 
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -87,7 +86,6 @@
         gtag('config', 'G-3MPMW851PX');
     </script>
 </head>
-
 
 <div class="zone1">
     <label>I-10 at Loyola</label>
@@ -223,16 +221,9 @@
         }
 
         function toggleRadar() {
-            $.fancybox.open({
-                src: 'https://bphillips09.github.io/traffiq/rainview.html',
-                type: 'iframe',
-                opts: {
-                    afterShow: function (instance, current) {
-                        console.info('viewer open');
-                    }
-                }
-            });
+            var lightbox = lity('rainview.html');
         }
+
     </script>
     <button id="fullscreenButton" onclick="toggleFullscreen()">Toggle Fullscreen</button>
     <button id="radarButton" onclick="toggleRadar()">Show Radar</button>
