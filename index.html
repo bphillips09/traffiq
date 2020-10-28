@@ -23,6 +23,18 @@
         object-fit: cover;
     }
 
+    #radarButton {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    #fullscreenButton {
+        position: fixed;
+        bottom: 0;
+        right: 100;
+    }
+
     label {
         display: block;
         text-align: center;
@@ -53,22 +65,29 @@
     }
 </style>
 
+
 <head>
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MPMW851PX"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-3MPMW851PX');
+        gtag('config', 'G-3MPMW851PX');
     </script>
 </head>
+
 
 <div class="zone1">
     <label>I-10 at Loyola</label>
@@ -202,6 +221,19 @@
                 openFullscreen();
             }
         }
+
+        function toggleRadar() {
+            $.fancybox.open({
+                src: 'rainview.html',
+                type: 'iframe',
+                opts: {
+                    afterShow: function (instance, current) {
+                        console.info('viewer open');
+                    }
+                }
+            });
+        }
     </script>
-    <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
+    <button id="fullscreenButton" onclick="toggleFullscreen()">Toggle Fullscreen</button>
+    <button id="radarButton" onclick="toggleRadar()">Show Radar</button>
 </body>
