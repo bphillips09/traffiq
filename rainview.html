@@ -61,7 +61,7 @@
         if (!radarLayers[ts]) {
             radarLayers[ts] = new L.TileLayer('https://tilecache.rainviewer.com/v2/radar/' + ts + '/256/{z}/{x}/{y}/2/1_1.png', {
                 tileSize: 256,
-                opacity: 0.5,
+                opacity: 0.0001,
                 zIndex: ts
             });
         }
