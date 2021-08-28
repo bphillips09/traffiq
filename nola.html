@@ -237,18 +237,23 @@
             window.location.href = page + ".html";
         }
 
+        function toggleEntergy() {
+            var lightbox = lity('https://www.etrviewoutage.com/map?state=NOLA');
+        }
+
     </script>
 
     <div id="buttonGroup" class="btn-group" style="width:100%; position: fixed; bottom: 0;">
-        <button class="button" style="width:11.11%" onclick="loadPage('lakecharles')">Lake Charles</button>
-        <button class="button" style="width:11.11%" onclick="loadPage('lafayette')">Lafayette I-10</button>
-        <button class="button" style="width:11.11%" onclick="loadPage('batonrouge')">Baton Rouge</button>
-        <button class="button" style="width:11.11%" onclick="loadPage('laplace')">Laplace / Covington</button>
-        <button class="button" style="width:11.11%; background-color: black;" onclick="loadPage('index')">Kenner /
+        <button class="button" style="width:10%" onclick="loadPage('lakecharles')">Lake Charles</button>
+        <button class="button" style="width:10%" onclick="loadPage('lafayette')">Lafayette I-10</button>
+        <button class="button" style="width:10%" onclick="loadPage('batonrouge')">Baton Rouge</button>
+        <button class="button" style="width:10%" onclick="loadPage('laplace')">Laplace / Covington</button>
+        <button class="button" style="width:10%; background-color: black;" onclick="loadPage('index')">Kenner /
             Metairie</button>
-        <button class="button" style="width:11.11%" onclick="loadPage('nola')">New Orleans</button>
-        <button class="button" style="width:11.11%; background:transparent; border:none; color:transparent;"> </button>
-        <button class="button" style="width:11.11%" onclick="toggleFullscreen()">Fullscreen Toggle</button>
-        <button class="button" style="width:11.11%" onclick="toggleRadar()">Show Radar</button>
+        <button class="button" style="width:10%" onclick="loadPage('nola')">New Orleans</button>
+        <button class="button" style="width:10%; background:transparent; border:none; color:transparent;"> </button>
+        <button class="button" style="width:10%" onclick="toggleFullscreen()">Fullscreen Toggle</button>
+        <button class="button" style="width:10%" onclick="toggleEntergy()">Entergy Outages</button>
+        <button class="button" style="width:10%" onclick="toggleRadar()">Show Radar</button>
     </div>
 </body>
