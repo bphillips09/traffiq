@@ -40,19 +40,7 @@
     .vjs-tech {
         object-fit: cover;
     }
-
-    #radarButton {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
-
-    #fullscreenButton {
-        position: fixed;
-        bottom: 0;
-        right: 100;
-    }
-
+    
     label {
         display: block;
         text-align: center;
@@ -247,14 +235,20 @@
             var lightbox = lity('rainview.html');
         }
 
+        function loadPage(page) {
+            window.location.href = page + ".html";
+        }
+
     </script>
-    <button id="fullscreenButton" onclick="toggleFullscreen()">Toggle Fullscreen</button>
-    <button id="radarButton" onclick="toggleRadar()">Show Radar</button>
-    <div id="buttonGroup" class="btn-group" style="width:100%;">
-        <button class="button" style="width:20%">Baton Rouge</button>
-        <button class="button" style="width:20%">Lake Charles</button>
-        <button class="button" style="width:20%">Lafayette</button>
-        <button class="button" style="width:20%">Kenner</button>
-        <button class="button" style="width:20%">New Orleans</button>
+
+    <div id="buttonGroup" class="btn-group" style="width:100%; position: fixed; bottom: 0;">
+        <button class="button" style="width:12.5%" onclick="loadPage('batonrouge')">Baton Rouge</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('lakecharles')">Lake Charles</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('lafayette')">Lafayette</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('index')">Kenner</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('nola')">New Orleans</button>
+        <button class="button" style="width:12.5%; background:transparent; border:none; color:transparent;"> </button>
+        <button class="button" style="width:12.5%" onclick="toggleFullscreen()">Fullscreen Toggle</button>
+        <button class="button" style="width:12.5%" onclick="toggleRadar()">Show Radar</button>
     </div>
 </body>
