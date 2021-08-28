@@ -19,6 +19,24 @@
         float: left;
     }
 
+    .btn-group button {
+        background-color: gray;
+        color: white;
+        padding: 10px 24px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .btn-group button:not(:last-child) {
+        border-right: none;
+    }
+
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
     .vjs-tech {
         object-fit: cover;
     }
@@ -49,17 +67,14 @@
         background-color: black;
     }
 
-    /* Firefox syntax */
     :-moz-full-screen {
         background-color: black;
     }
 
-    /* IE/Edge syntax */
     :-ms-fullscreen {
         background-color: black;
     }
 
-    /* Standard syntax */
     :fullscreen {
         background-color: black;
     }
@@ -235,9 +250,11 @@
     </script>
     <button id="fullscreenButton" onclick="toggleFullscreen()">Toggle Fullscreen</button>
     <button id="radarButton" onclick="toggleRadar()">Show Radar</button>
-    <div class="btn-group" style="width:100%">
-        <button style="width:33.3%">Button 1</button>
-        <button style="width:33.3%">Button 2</button>
-        <button style="width:33.3%">Button 3</button>
+    <div id="buttonGroup" class="btn-group" style="width:100%;">
+        <button class="button" style="width:20%">Baton Rouge</button>
+        <button class="button" style="width:20%">Lake Charles</button>
+        <button class="button" style="width:20%">Lafayette</button>
+        <button class="button" style="width:20%">Kenner</button>
+        <button class="button" style="width:20%">New Orleans</button>
     </div>
 </body>
