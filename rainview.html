@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-    <script src="./L.KML.js"></script>
     <style type="text/css">
         li {
             list-style: none;
@@ -31,20 +30,6 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attributions: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
         }).addTo(map);
-
-        fetch('nhc_active.kml')
-            .then(res => res.text())
-            .then(kmltext => {
-                // Create new kml overlay
-                const parser = new DOMParser();
-                const kml = parser.parseFromString(kmltext, 'text/xml');
-                const track = new L.KML(kml);
-                map.addLayer(track);
-
-                // Adjust map to show the kml
-                const bounds = track.getBounds();
-                map.fitBounds(bounds);
-            });
 
         /**
          * RainViewer radar animation part
