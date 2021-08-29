@@ -32,7 +32,7 @@
             attributions: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        fetch('/nhc_active.kml')
+        fetch('nhc_active.kml')
             .then(res => res.text())
             .then(kmltext => {
                 const parser = new DOMParser();
