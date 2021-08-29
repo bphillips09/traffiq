@@ -98,7 +98,7 @@
         if (radarLayers[currentTimestamp]) {
             radarLayers[currentTimestamp].setOpacity(0);
         }
-        radarLayers[nextTimestamp].setOpacity(0.5);
+        radarLayers[nextTimestamp].setOpacity(0.35);
 
         document.getElementById("timestamp").innerHTML = (new Date(nextTimestamp * 1000)).toString();
     }

@@ -88,6 +88,17 @@
 
         gtag('config', 'G-3MPMW851PX');
     </script>
+
+    <div id="buttonGroup" class="btn-group" style="width:100%">
+        <button class="button" style="width:12.5%" onclick="loadPage('batonrouge')">Baton Rouge</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('lakecharles')">Lake Charles</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('lafayette')">Lafayette</button>
+        <button class="button" style="width:12.5%; background-color: black;" onclick="loadPage('index')">Kenner</button>
+        <button class="button" style="width:12.5%" onclick="loadPage('nola')">New Orleans</button>
+        <button class="button" style="width:12.5%; background:transparent; border:none; color:transparent;"> </button>
+        <button class="button" style="width:12.5%" onclick="toggleFullscreen()">Fullscreen Toggle</button>
+        <button class="button" style="width:12.5%" onclick="toggleEntergy()">Show Radar</button>
+    </div>
 </head>
 
 <div class="zone1">
@@ -189,8 +200,6 @@
         <source src="https://ITSStreamingNO.dotd.la.gov/public/nor-cam-028.streams/playlist.m3u8"
             type='application/x-mpegURL' />
     </video>
-    <br>
-    <br>
 </div>
 
 <body>
@@ -246,18 +255,4 @@
         }
 
     </script>
-
-    <div id="buttonGroup" class="btn-group" style="width:100%; position: fixed; bottom: 0;">
-        <button class="button" style="width:10%" onclick="loadPage('lakecharles')">Lake<br>Charles</button>
-        <button class="button" style="width:10%" onclick="loadPage('lafayette')">Lafayette<br>I-10</button>
-        <button class="button" style="width:10%" onclick="loadPage('batonrouge')">Baton<br>Rouge</button>
-        <button class="button" style="width:10%; background-color: black;"
-            onclick="loadPage('laplace')">Laplace /<br>Covington</button>
-        <button class="button" style="width:10%" onclick="loadPage('index')">Kenner /<br>Metairie</button>
-        <button class="button" style="width:10%" onclick="loadPage('nola')">New<br>Orleans</button>
-        <button class="button" style="width:10%; background:transparent; border:none; color:transparent;"> </button>
-        <button class="button" style="width:10%" onclick="toggleFullscreen()">Fullscreen<br>Toggle</button>
-        <button class="button" style="width:10%" onclick="toggleEntergy()">Entergy<br>Outages</button>
-        <button class="button" style="width:10%" onclick="toggleRadar()">Show<br>Radar</button>
-    </div>
 </body>
